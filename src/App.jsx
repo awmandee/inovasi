@@ -1,28 +1,35 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
-import AddInovasi from "./components/AddInovasi";
-import EditInovasi from "./components/EditInovasi";
-import ListInovasi from "./components/ListInovasi";
+import AddParkir from "./components/AddParkir";
+import ListParkir from "./components/ListParkir";
+import AddParkirMasukKeluar from "./components/AddParkirMasukKeluar";
+import ListParkirMasukKeluar from "./components/ListParkirMasukKeluar";
 import "./App.css";
 
 function App() {
-   return (
-      <Router>
-         <div className="d-flex flex-column min-vh-100">
-            <HeaderComponent />
-            <div className="flex-grow-1">
-               <Routes>
-                  <Route path="/tambah-inovasi" element={<AddInovasi />} />
-                  <Route path="/list-inovasi" element={<ListInovasi />} />
-
-                  <Route path="/update-inovasi/:id" element={<EditInovasi />} />
-               </Routes>
+    return (
+        <Router>
+            <div className="d-flex flex-column min-vh-100">
+                <HeaderComponent />
+                <div className="flex-grow-1">
+                    <Routes>
+                        <Route path="/tambah-parkir" element={<AddParkir />} />
+                        <Route path="/list-parkir" element={<ListParkir />} />
+                        <Route
+                            path="/tambah-parkirMasukKeluar"
+                            element={<AddParkirMasukKeluar />}
+                        />
+                        <Route
+                            path="/list-parkirMasukKeluar"
+                            element={<ListParkirMasukKeluar />}
+                        />
+                    </Routes>
+                </div>
+                <FooterComponent />
             </div>
-            <FooterComponent />
-         </div>
-      </Router>
-   );
+        </Router>
+    );
 }
 
 export default App;

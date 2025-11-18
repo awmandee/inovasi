@@ -2,50 +2,39 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function HeaderComponent() {
-   return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-         <div className="container">
-            <a className="navbar-brand" href="/">
-               Inovasi
-            </a>
-            <button
-               className="navbar-toggler"
-               type="button"
-               data-bs-toggle="collapse"
-               data-bs-target="navbarNav"
-               aria-controls="navbarNav"
-               aria-expanded="false"
-               aria-label="Toggle navigation"
-            >
-               <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-               <ul className="navbar-nav">
-                  <li className="nav-item">
-                     <a className="nav-link" href="/">
-                        Home
-                     </a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="/list-inovasi">
-                        Inovasi
-                     </a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="/about">
-                        Tentang
-                     </a>
-                  </li>
-                  <li className="nav-item">
-                     <a className="nav-link" href="/contact">
-                        Kontak
-                     </a>
-                  </li>
-               </ul>
+    return (
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <div className="container">
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <a className="nav-link" href="/list-parkir">
+                                Master Jenis Parkir
+                            </a>
+
+                            <a
+                                className="nav-link"
+                                href="/list-parkirMasukKeluar"
+                            >
+                                Transaksi Parkir Masuk Keluar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-         </div>
-      </nav>
-   );
+        </nav>
+    );
 }
 
 export default HeaderComponent;
